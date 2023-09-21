@@ -1,0 +1,31 @@
+/* for about.html */
+
+
+/* Global */
+.dark {
+    padding: 15px;
+    background: #35424a;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Main */
+.sidebar {
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+.main .main-col {
+    float: left;
+    width: 65%;
+}
+
+@media (max-width: 768px)  {
+    .main .main-col , .sidebar {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}

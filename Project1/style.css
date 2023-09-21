@@ -1,0 +1,325 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,500;1,700&display=swap');
+
+/* Univarsal Changes */
+
+* {
+    /* This is added so that the padding of any element should'nt add up to it's width */
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto' , sans-serif;
+    font-weight: 300;
+    background: #181818;
+    color: white;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5 , h6 {
+    font-weight: 300;
+}
+
+/* CONTENT */
+
+
+
+.content {
+    /* To make the left and right section come on same line */
+    /* i.e. To Every thing inside the content class  an flex item */
+    display: flex;
+    /* this is the default value anyway */
+    flex-direction: row;
+    
+}
+
+
+/* Left Section */
+.left {
+    /* Giving left section half viewport of lenght */
+    flex: 1;
+    /* To Every thing inside the left class  an flex item */
+    display: flex;
+    /* To make every flex item arrange in an column format */
+    flex-direction: column;
+    /* To align center horizontally*/
+    align-items: center;
+    /* To align center vertically*/
+    justify-content: center;
+    /* setting the height of the left section to 100 viewport i.e. full screen */
+    height: 100vh;
+
+}
+
+
+/* Left-Main Section */
+.signin {
+    /* To Every thing inside the signin class  an flex item */
+    display: flex;
+    /* To make every flex item arrange in an column format */
+    flex-direction: column;
+    /* To align center horizontally*/
+    align-items: center;
+    /* To align center vertically*/
+    justify-content: center;
+    /* defining that signin section width should only be in the 80% width left section*/
+    width: 80%;
+    /* To push the footer down a little */
+    /* 1rem = 1 times of html page defined px (i.e. 12px) */
+    padding-bottom: 1rem;
+}
+
+
+
+.signin .logo {
+    /* Pushing the form section down to 8vh i.e. 8% of the height of the screen */
+    margin-bottom: 8vh;
+}
+
+.signin .logo img {
+    width: 300px;
+}
+
+/* accessing form class inside of signin section */
+.signin .form {
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+.signin .form .label {
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.signin .form .text-input {
+    margin-bottom: 1.3rem;
+    /* increasing the width of the input section */
+    width: 100%;
+    border-radius: 2px;
+    background: #181818;
+    border: 1px solid #555;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    line-height: 1.3rem;
+}
+
+.signin .form .primary-btn {
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background: #f96816;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+    width: 100%;
+}
+
+.signin .form .primary-btn:hover {
+    background: #ff7b39;
+}
+
+
+.signin .secondary-btn , .or  , .links {
+    width: 60%;
+}
+
+/* Main links Section */
+.signin .links .link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    
+}
+
+/* Main OR Section */
+.signin .or {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+
+.signin .or  .bar {
+    flex: auto;
+    line-height: 1px;
+    border-color: #aaa;
+}
+
+.signin .or span {
+    color: #ccc;
+    padding: 0 0.8rem;
+}
+
+.secondary-btn {
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 1px solid #f4f4f4;
+    border-radius: 2px;
+    font-weight: 500;
+    background: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+    
+
+}
+
+.secondary-btn:hover {
+    border-color: #ff7b39;
+    color: #ff7b39; ;
+}
+
+
+/* Main Footer Section */
+
+.main-footer {
+    color: #ccc;
+    text-align: center;
+    font-size: 0.8rem;
+    max-width: 80%;
+    padding-top: 5rem;
+}
+
+.main-footer .footer-link {
+    color: #f96816;
+    text-decoration: underline;
+}
+
+/* Right Section */
+.right {
+     /* Giving right section half viewport of lenght */
+     /* i.e. we use use flex property to define how much space a flex section can have */
+    flex: 1;
+}
+
+.right .showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* saying that the image should not repeat be on center from top-bottom  and right-left and cover the whole page */
+    background: url('img/pexels.jpg') no-repeat center center / cover;
+    height: 100vh;
+
+}
+
+.right .showcase .showcase-text {
+    font-size: 3rem;
+    width: 100%;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.right .showcase .secondary-btn {
+    width: 60%;
+    margin: auto;
+}
+/* Media Queries */
+@media (min-width: 1200px) {
+    .left {
+        flex: 4;
+    }
+
+    .right {
+        flex: 6;
+    }
+    /* Defining if Browser screen width is greater than 1200px let the screen proportin of left and right section be 40:60 */
+}
+
+
+@media (max-width:768px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        justify-content: start;
+        margin-top: 6vh;
+
+    }
+
+    .signin .logo {
+        
+     
+        margin-bottom: 7vh;
+
+    }
+
+    .signin .text-input {
+        margin-bottom: 0.7rem;
+    }
+
+    .main-footer {
+        padding-top: 5rem;
+        
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    
+    .left {
+        justify-content: center; /* Center content vertically */
+        margin-top: 0; /* Remove top margin */
+        overflow: hidden;
+
+
+    }
+
+    .signin {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .signin .logo {
+        width: 100px;
+
+        transform: translateX(-100px);
+    }
+
+    .signin .form  {
+        width: 100%; /* Make input fields full width */
+    }
+
+    .signin .secondary-btn,
+    .or,
+    .links {
+        width: 100%; /* Make buttons and links full width */
+        text-align: center; /* Center-align text */
+    }
+
+    .right {
+        display: none; /* Hide the right section on small screens */
+    }
+}
+
+
+
+
+
+
+
+
