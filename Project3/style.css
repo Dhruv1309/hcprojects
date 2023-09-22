@@ -247,7 +247,7 @@ body {
 }
 
 .index-links section{
-    margin: 16px 16px 0px;
+    margin: 16px 16px 0;
     width: calc(100% - 32px);
     height: 100px;
     background-color: #f2f2f2;
@@ -285,7 +285,6 @@ body {
     }
 
     .index-links {
-    
         overflow: hidden;
         
     }
