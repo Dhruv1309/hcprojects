@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300&display=swap');
+
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+
+
+body {
+    font-family: 'Poppins' , sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 3rem;
+    
+}
+
+h2 {
+    font-size: 2rem;
+    
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: "Roboto" , sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+ul {
+    list-style: none;
+}
+/* Utility Class */
+
+
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1180px;
+    /* margin inline use is to give margin from left and right at the same time */
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover-link {
+    color: var(--primary-text-color);
+    transition: 0.2s all ease-out;
+}
+
+.hover-link:hover {
+    color: var(--accent-color);
+}
+
+.primary-btn {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-btn:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.secondary-btn {
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+
+.secondary-btn:hover {
+    background-color: var(--accent-color);
+}
+
+
+/* Top Banner */
+
+.top-banner {
+    background-image: url("img/asset\ 30.jpeg");
+    background-color: #4fb3d4;
+    background-size: 300px;
+  
+}
+
+.banner-text {
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+
+/* Nav */
+.main-nav {
+    margin-top: 20px;
+    /* already flex */
+    justify-content: space-between;
+}
+
+.company-logo img {
+    width: 200px;
+}
+
+
+.nav-links {
+    /* TO make the width of the nav-links 730 px  */
+    flex-basis: 730px;
+}
+
+
+.nav-links ul{
+    justify-content: end;
+    gap: 40px;
+}
+
+  /* Header */
+
+header {
+    padding: 50px var(--padding-inline-section);
+}
+
+.header-section {
+    justify-content: center;
+    gap: 50px;
+}
+
+.header-left {
+    max-width: 40vw;
+}
+
+.header-left h1 {
+    margin-top: 20px;
+}
+
+.header-right img {
+    width: 600px;
+}
+
+.get-started-btn {
+    margin-top: 20px;
+}
+
+/* Companies Section */
+
+.companies-header {
+    text-align: center;
+    margin-block: 30px;
+    color: var(--primary-text-color);
+}
+
+.logos {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    height: 46px;
+}
+
+
+
+/* Features Section */
+
+
+.features-section {
+    padding: 80px var(--padding-inline-section) 0;
+    background-image: url(img/asset\ 34.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 700px;
+}
+
+.features-header {
+    text-align: center;
+}
+
+.features-header h2 {
+    margin-bottom: 20px;
+}
+
+
+.features-area {
+    margin-top: 20px;
+}
+
+.flex-row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.features-card {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.features-card img {
+    width: 50px;
+}
+
+
+/* Big feature Section */
+
+.big-feature-section {
+    padding: 30px var(--padding-inline-section) 0;
+}
+
+.big-feature-container {
+    gap: 30px;
+}
+
+.feature-img img{
+    width: 100%;
+}
+
+.feature-desc {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Examples Section */
+
+.examples-header {
+    text-align: center;
+}
+
+.examples-header {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.examples-area {
+    justify-content: space-between;
+    margin-block: 30px;
+}
+.examples-card {
+    width: 23%;
+    position: relative;
+    min-height: 300px;
+    background: black;
+
+    /* linera gradient is used to define how a image should be styled with defined color of background */
+    /* first value of linear gradient is define the opacity of background color at the start of the image and the second value 
+       is defining the color for the end of the image */
+    background: linear-gradient(rgba(0,0,0,0.1) , rgba(0,0,0,0.8)) ,url(img/asset\ 36.jpeg);
+    background-size: cover;
+    box-shadow: 2px 2px 33px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+
+}
+
+.examples-card:nth-of-type(2) {
+    background: linear-gradient(rgba(0,0,0,0.1) , rgba(0,0,0,0.8)) ,url(img/asset\ 37.jpeg);
+    background-size: cover;
+
+}
+.examples-card:nth-of-type(3) {
+    background: linear-gradient(rgba(0,0,0,0.1) , rgba(0,0,0,0.8)) ,url(img/asset\ 38.jpeg);
+    background-size: cover;
+
+}
+.examples-card:nth-of-type(4) {
+    background: linear-gradient(rgba(0,0,0,0.1) , rgba(0,0,0,0.8)) ,url(img/asset\ 39.jpeg);
+    background-size: cover;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+}
+
+/* CTA Section */
+.cta-section-container {
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    
+}
+
+.cta-section {
+    padding: 120px var(--padding-inline-section);
+    background-color: #183b56;
+}
+
+.cta-section-container p {
+    color: white;
+    margin-top: 20px;
+}
+
+
+/* Footer */
+
+footer {
+    padding-block: 80px;
+    background-color: #ebf2fa;
+}
+.footer-container {
+    justify-content: space-between;
+    align-items: flex-start;
+    
+
+}
+.link-column {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    gap: 20px;
+}
+
+.link-column h4 {
+    font-size: 20px;
+}
+
+/* Sub Footer */
+
+.subfooter {
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section);
+}
+
+.subfooter-container {
+    justify-content: center;
+    gap: 30px;
+}
