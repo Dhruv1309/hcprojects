@@ -4,7 +4,7 @@
 /* Univarsal Changes */
 
 * {
-    /* This is added so that the padding of any element should'nt add up to it's width */
+    /* This is added so that the padding of any element should add up to element's width */
     box-sizing: border-box;
 }
 
